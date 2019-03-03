@@ -1,0 +1,27 @@
+---
+title: "DevelopingDataProductsWeek2Assignment"
+
+My First Map
+Let’s create a map that shows the Tour Eiffel in Paris.
+
+To do that, let’s first load the library Leaflet.
+
+```{r library}
+library(leaflet)
+```
+Create the map of Paris
+
+```{r maps}
+my_map <- leaflet() %>%
+addTiles()
+my_map
+```
+Create a link to the office site of Eiffel Tour, which we could get relevant information.
+
+```{r EiffelTower}
+EiffelTour <- c("<a href= 'http://www.toureiffel.paris' >Eiffel Tour</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=48.858053, lng=2.294289, popup = EiffelTour)
+```
+
